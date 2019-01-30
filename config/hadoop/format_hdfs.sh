@@ -16,4 +16,4 @@
 
 . ~/.profile
 
-hdfs namenode -format
+hdfs namenode -format -force
