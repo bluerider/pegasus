@@ -18,7 +18,7 @@ sudo add-apt-repository ppa:openjdk-r/ppa -y
 
 sudo apt-get update
 
-sudo apt-get --yes --force-yes install ssh rsync openjdk-8-jdk scala python-dev python-pip python-numpy python-scipy python-pandas gfortran git supervisor ruby bc
+sudo apt-get install ssh rsync openjdk-8-jdk scala python-dev python-pip python-numpy python-scipy python-pandas gfortran git supervisor ruby bc -y
 
 # get sbt repository
 wget https://dl.bintray.com/sbt/debian/sbt-0.13.7.deb -P ~/Downloads
@@ -28,7 +28,7 @@ sudo dpkg -i ~/Downloads/sbt-*
 sudo apt-get purge maven maven2 maven3
 sudo apt-add-repository -y ppa:andrei-pozolotin/maven3
 sudo apt-get update
-sudo apt-get --yes --force-yes install maven3
+sudo apt-get install maven3 -y
 
 sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
 

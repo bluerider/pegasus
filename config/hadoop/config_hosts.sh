@@ -18,7 +18,7 @@ MASTER_DNS=$1; shift
 MASTER_NAME=$1; shift
 SLAVE_DNS_NAME=( "$@" )
 LEN=${#SLAVE_DNS_NAME[@]}
-HALF=$(echo "$LEN/2" | bc)
+HALF=$[$LEN/2]
 SLAVE_DNS=( "${SLAVE_DNS_NAME[@]:0:$HALF}" )
 SLAVE_NAME=( "${SLAVE_DNS_NAME[@]:$HALF:$HALF}" )
 

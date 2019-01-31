@@ -16,7 +16,7 @@
 
 MEMINFO=($(free -m | sed -n '2p' | sed -e "s/[[:space:]]\+/ /g"))
 TOTMEM=${MEMINFO[1]}
-EXECMEM=$(echo "0.90 * ($TOTMEM - 1000)" | bc -l)
+EXECMEM=$[9*$[$TOTMEM-1000]/10]
 
 sudo chown -R ubuntu ~/
 

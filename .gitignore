@@ -91,3 +91,6 @@ node_modules
 
 # config templates
 *.yml
+
+# ignore any ipython notebooks
+**.ipy*
